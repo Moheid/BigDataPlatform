@@ -1293,35 +1293,35 @@ This platform provides:
 
 After completing this repository, you should be able to:
 
-:ok_hand: Design a Big Data Platform architecture.
-:ok_hand: Provision infrastructure on Contabo.
-:ok_hand: Automate servers using Ansible.
-:ok_hand: Build reusable Ansible roles.
-:ok_hand: Deploy FreeIPA.
-:ok_hand: Configure TLS certificates.
-:ok_hand: Deploy distributed MinIO.
-:ok_hand: Configure S3 buckets and IAM.
-:ok_hand: Use the mc CLI.
-:ok_hand: Deploy PostgreSQL.
-:ok_hand: Configure metadata databases.
-:ok_hand: Build ZooKeeper clusters.
-:ok_hand: Build multi-broker Kafka clusters.
-:ok_hand: Manage Kafka topics.
-:ok_hand: Manage partitions and replication.
-:ok_hand: Manage consumer groups and offsets.
-:ok_hand: Test Kafka producers and consumers.
-:ok_hand: Perform failure recovery.
-:ok_hand: Configure Schema Registry.
-:ok_hand: Deploy Kafka UI.
-:ok_hand: Deploy Redis.
-:ok_hand: Configure Kafka Connect.
-:ok_hand: Stream PostgreSQL data into Kafka.
-:ok_hand: Stream Kafka data into MinIO.
-:ok_hand: Deploy Prometheus.
-:ok_hand: Build Grafana dashboards.
-:ok_hand: Configure Alertmanager.
-:ok_hand: Troubleshoot distributed systems.
-:ok_hand: Build an end-to-end Big Data Platform.
+- :ok_hand: Design a Big Data Platform architecture.
+- :ok_hand: Provision infrastructure on Contabo.
+- :ok_hand: Automate servers using Ansible.
+- :ok_hand: Build reusable Ansible roles.
+- :ok_hand: Deploy FreeIPA.
+- :ok_hand: Configure TLS certificates.
+- :ok_hand: Deploy distributed MinIO.
+- :ok_hand: Configure S3 buckets and IAM.
+- :ok_hand: Use the mc CLI.
+- :ok_hand: Deploy PostgreSQL.
+- :ok_hand: Configure metadata databases.
+- :ok_hand: Build ZooKeeper clusters.
+- :ok_hand: Build multi-broker Kafka clusters.
+- :ok_hand: Manage Kafka topics.
+- :ok_hand: Manage partitions and replication.
+- :ok_hand: Manage consumer groups and offsets.
+- :ok_hand: Test Kafka producers and consumers.
+- :ok_hand: Perform failure recovery.
+- :ok_hand: Configure Schema Registry.
+- :ok_hand: Deploy Kafka UI.
+- :ok_hand: Deploy Redis.
+- :ok_hand: Configure Kafka Connect.
+- :ok_hand: Stream PostgreSQL data into Kafka.
+- :ok_hand: Stream Kafka data into MinIO.
+- :ok_hand: Deploy Prometheus.
+- :ok_hand: Build Grafana dashboards.
+- :ok_hand: Configure Alertmanager.
+- :ok_hand: Troubleshoot distributed systems.
+- :ok_hand: Build an end-to-end Big Data Platform.
 
 ## 🗺️ Roadmap
 - [ ] Phase 1 — Infrastructure
