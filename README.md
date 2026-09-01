@@ -4,7 +4,7 @@
 
 
 
-Build it. Automate it. Secure it. Monitor it. Break it. Recover it.
+```Build it. Automate it. Secure it. Monitor it. Break it. Recover it.```
 
 A complete, hands-on repository for designing, deploying, automating, securing, monitoring, and operating a production-oriented Big Data Platform using open-source technologies.
 
@@ -1320,49 +1320,49 @@ Troubleshoot distributed systems.
 Build an end-to-end Big Data Platform.
 
 ## 🗺️ Roadmap
-[] Phase 1 — Infrastructure
+- [ ] Phase 1 — Infrastructure
 
-[] Contabo infrastructure
+- [ ] Contabo infrastructure
 
-[] Linux configuration
+- [ ] Linux configuration
 
-[] Networking
+- [ ] Networking
 
-[] SSH
+- [ ] SSH
 
-[]Firewall
+- [ ] Firewall
 
-[]DNS/hosts
+- [ ] DNS/hosts
 
 Phase 2 — Automation
 
-Ansible installation
+- [ ] Ansible installation
 
-Inventory
+- [ ] Inventory
 
-Variables
+- [ ] Variables
 
-Playbooks
+- [ ] Playbooks
 
-Roles
+- [ ] Roles
 
-Templates
+- [ ] Templates
 
-Full automation
+- [ ] Full automation
 
 ## Phase 3 — Security
 
-FreeIPA
+- [ ] FreeIPA
 
-Users
+- [ ] Users
 
-Groups
+- [ ] Groups
 
-Kerberos
+- [ ] Kerberos
 
-CA
+- [ ] CA
 
-TLS
+- [ ] TLS
 
 ## Phase 4 — Storage
 
