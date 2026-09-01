@@ -1246,17 +1246,11 @@ Secrets management
 
 This platform provides:
 
-Automation
+*1. Automation:* Infrastructure can be recreated consistently through Ansible.
 
-Infrastructure can be recreated consistently through Ansible.
+*2. Scalability:* Kafka and MinIO can scale horizontally.
 
-Scalability
-
-Kafka and MinIO can scale horizontally.
-
-High Availability
-
-Distributed services reduce single points of failure.
+*3.High Availability:* Distributed services reduce single points of failure.
 
 Security
 
@@ -1282,14 +1276,14 @@ Practical Skills
 
 The labs develop:
 
-Linux administration
-DevOps
-Data Engineering
-Platform Engineering
-SRE
-Distributed Systems
-Security
-Monitoring
+- Linux administration
+- DevOps
+- Data Engineering
+- Platform Engineering
+- SRE
+- Distributed Systems
+- Security
+- Monitoring
 
 ## 🎓 Learning Outcomes
 
@@ -1326,19 +1320,19 @@ Troubleshoot distributed systems.
 Build an end-to-end Big Data Platform.
 
 ## 🗺️ Roadmap
-[ ] Phase 1 — Infrastructure
+[] Phase 1 — Infrastructure
 
-[ ] Contabo infrastructure
+[] Contabo infrastructure
 
-[ ] Linux configuration
+[] Linux configuration
 
-[ ] Networking
+[] Networking
 
-[ ] SSH
+[] SSH
 
-Firewall
+[]Firewall
 
-DNS/hosts
+[]DNS/hosts
 
 Phase 2 — Automation
 
