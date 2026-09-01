@@ -8,7 +8,7 @@
 
 A complete, hands-on repository for designing, deploying, automating, securing, monitoring, and operating a production-oriented Big Data Platform using open-source technologies.
 
-📖 Overview
+## 📖 Overview
 
 This repository provides a practical learning and engineering environment for building an end-to-end Big Data Platform on Contabo infrastructure.
 
@@ -38,25 +38,25 @@ Failure Recovery
 
 The platform combines:
 
-Contabo Infrastructure
-Ansible
-FreeIPA
-MinIO S3
-PostgreSQL
-ZooKeeper
-Apache Kafka
-Schema Registry
-Kafka UI
-Redis
-Kafka Connect
-Prometheus
-Grafana
-Alertmanager
-SFTP
+- Contabo Infrastructure
+- Ansible
+- FreeIPA
+- MinIO S3
+- PostgreSQL
+- ZooKeeper
+- Apache Kafka
+- Schema Registry
+- Kafka UI
+- Redis
+- Kafka Connect
+- Prometheus
+- Grafana
+- Alertmanager
+- SFTP
 
-The objective is to learn these technologies individually and as an integrated distributed platform.
+```The objective is to learn these technologies individually and as an integrated distributed platform.```
 
-📚 Table of Contents
+## 📚 Table of Contents
 Architecture
 Platform Components
 Technology Background
@@ -85,7 +85,8 @@ Security
 Benefits
 Learning Outcomes
 Roadmap
-🏗️ Architecture
+
+## 🏗️ Architecture
 
 The platform follows a layered architecture.
 
@@ -134,7 +135,7 @@ The platform follows a layered architecture.
              │              INFRASTRUCTURE                      │
              │             Contabo / Linux                      │
              └─────────────────────────────────────────────────┘
-🧩 Platform Components
+## 🧩 Platform Components
 Layer	Technology	Purpose
 Infrastructure	Contabo	Compute and networking
 Automation	Ansible	Infrastructure as Code
@@ -151,7 +152,8 @@ Metrics	Prometheus	Metrics collection
 Visualization	Grafana	Dashboards
 Alerting	Alertmanager	Alert routing
 File Transfer	SFTP	Secure external data exchange
-🌐 Infrastructure Topology
+
+## 🌐 Infrastructure Topology
 
 The platform runs on a distributed Contabo environment.
 
@@ -184,7 +186,8 @@ DNS/hosts resolution
 Firewall configuration
 Required service ports
 Appropriate CPU/RAM/storage
-⚙️ Ansible Automation
+
+## ⚙️ Ansible Automation
 
 Ansible is the primary automation framework.
 
@@ -234,7 +237,8 @@ Run a Playbook
 ansible-playbook playbooks/site.yml
 Check Before Applying
 ansible-playbook playbooks/site.yml --check
-🔐 FreeIPA Security
+
+## 🔐 FreeIPA Security
 
 FreeIPA provides centralized:
 
@@ -271,7 +275,8 @@ Certificate issuance
 TLS configuration
 Certificate validation
 Secure Kafka communication
-🪣 MinIO S3 Storage
+
+## 🪣 MinIO S3 Storage
 
 MinIO provides distributed S3-compatible object storage.
 
