@@ -292,39 +292,40 @@ MinIO provides distributed S3-compatible object storage.
 
 Topics:
 
-Distributed storage
-Erasure coding
-Buckets
-Objects
-IAM
-Policies
-Users
-Groups
-Service accounts
-Tenant isolation
-Storage performance
-MinIO CLI
+- Distributed storage
+- Erasure coding
+- Buckets
+- Objects
+- IAM
+- Policies
+- Users
+- Groups
+- Service accounts
+- Tenant isolation
+- Storage performance
+- MinIO CLI
 
 Configure an alias:
 
-mc alias set minio https://minio.example.com ACCESS_KEY SECRET_KEY
+- mc alias set minio https://minio.example.com ACCESS_KEY SECRET_KEY
 
 List buckets:
 
-mc ls minio
+- mc ls minio
 
 Create a bucket:
 
-mc mb minio/data
+- mc mb minio/data
 
 Upload data:
 
-mc cp dataset.csv minio/data/
+- mc cp dataset.csv minio/data/
 
 Mirror a directory:
 
-mc mirror ./data minio/data
-🗄️ PostgreSQL
+- mc mirror ./data minio/data
+  
+## 🗄️ PostgreSQL
 
 PostgreSQL provides metadata storage for platform services.
 
@@ -339,16 +340,16 @@ PostgreSQL
 
 Topics:
 
-Installation
-Database creation
-Users
-Roles
-Permissions
-Authentication
-Backup
-Restore
-Monitoring
-Application connections
+- Installation
+- Database creation
+- Users
+- Roles
+- Permissions
+- Authentication
+- Backup
+- Restore
+- Monitoring
+- Application connections
 
 Example:
 
@@ -357,7 +358,8 @@ CREATE DATABASE airflow;
 CREATE DATABASE superset;
 CREATE DATABASE mlflow;
 CREATE DATABASE hive;
-🦒 ZooKeeper & Kafka
+
+## 🦒 ZooKeeper & Kafka
 
 Kafka provides distributed event streaming.
 
@@ -377,81 +379,88 @@ Kafka provides distributed event streaming.
 
 Topics:
 
-Brokers
-Topics
-Partitions
-Producers
-Consumers
-Consumer groups
-Offsets
-Retention
-Replication
-ISR
-Leader election
-High availability
-Disaster recovery
-📌 Kafka Topic Management
+- Brokers
+- Topics
+- Partitions
+- Producers
+- Consumers
+- Consumer groups
+- Offsets
+- Retention
+- Replication
+- ISR
+- Leader election
+- High availability
+- Disaster recovery
+
+## 📌 Kafka Topic Management
 
 List topics:
 
-kafka-topics.sh \
+`kafka-topics.sh \
   --bootstrap-server kafka01:9092 \
-  --list
+  --list`
 
 Create a topic:
 
-kafka-topics.sh \
+`kafka-topics.sh \
   --bootstrap-server kafka01:9092 \
   --create \
   --topic events \
   --partitions 6 \
-  --replication-factor 3
+  --replication-factor 3`
 
 Describe a topic:
 
-kafka-topics.sh \
+`kafka-topics.sh \
   --bootstrap-server kafka01:9092 \
   --describe \
-  --topic events
-📨 Kafka Producer Testing
-kafka-console-producer.sh \
+  --topic events`
+
+## 📨 Kafka Producer Testing
+
+`kafka-console-producer.sh \
   --bootstrap-server kafka01:9092 \
-  --topic events
+  --topic events`
 
 Send:
 
-hello big data
+`hello big data
 event-001
 event-002
-event-003
-📥 Kafka Consumer Testing
-kafka-console-consumer.sh \
+event-003`
+
+## 📥 Kafka Consumer Testing
+
+`kafka-console-consumer.sh \
   --bootstrap-server kafka01:9092 \
   --topic events \
-  --from-beginning
-🔄 Offset Management
+  --from-beginning`
+  
+## 🔄 Offset Management
 
 Inspect consumer groups:
 
-kafka-consumer-groups.sh \
+`kafka-consumer-groups.sh \
   --bootstrap-server kafka01:9092 \
-  --list
+  --list`
 
 Describe a group:
 
-kafka-consumer-groups.sh \
+`kafka-consumer-groups.sh \
   --bootstrap-server kafka01:9092 \
   --describe \
-  --group my-group
+  --group my-group`
 
 Labs include:
 
-Offset inspection
-Offset reset
-Consumer lag
-Consumer rebalancing
-Partition assignment
-🧬 Schema Registry
+- Offset inspection
+- Offset reset
+- Consumer lag
+- Consumer rebalancing
+- Partition assignment
+
+## 🧬 Schema Registry
 
 Schema Registry manages message schemas.
 
@@ -473,28 +482,29 @@ Consumer
 
 Topics:
 
-Schema registration
-Schema IDs
-Serialization
-Compatibility
-Versioning
-Schema evolution
-Backward compatibility
-Forward compatibility
-🖥️ Kafka UI
+- Schema registration
+- Schema IDs
+- Serialization
+- Compatibility
+- Versioning
+- Schema evolution
+- Backward compatibility
+- Forward compatibility
+
+## 🖥️ Kafka UI
 
 Kafka UI provides a graphical interface for managing Kafka.
 
 Features:
 
-Cluster overview
-Brokers
-Topics
-Partitions
-Consumer groups
-Consumer offsets
-Messages
-Schemas
+- Cluster overview
+- Brokers
+- Topics
+- Partitions
+- Consumer groups
+- Consumer offsets
+- Messages
+- Schemas
 
 Architecture:
 
@@ -514,17 +524,17 @@ Redis provides fast in-memory data services.
 
 Topics:
 
-Strings
-Lists
-Sets
-Sorted Sets
-Hashes
-TTL
-Caching
-Pub/Sub
-Persistence
-RDB
-AOF
+- Strings
+- Lists
+- Sets
+- Sorted Sets
+- Hashes
+- TTL
+- Caching
+- Pub/Sub
+- Persistence
+- RDB
+- AOF
 
 Architecture:
 
@@ -542,7 +552,8 @@ Test Redis:
 redis-cli
 SET platform "big-data"
 GET platform
-🔌 Kafka Connect
+
+## 🔌 Kafka Connect
 
 Kafka Connect provides integration between Kafka and external systems.
 
@@ -566,7 +577,8 @@ Offsets
 Connector configuration
 Error handling
 Scaling
-🔄 PostgreSQL → Kafka
+
+## 🔄 PostgreSQL → Kafka
 
 Example pipeline:
 
@@ -590,7 +602,8 @@ Capture records.
 Write records to Kafka.
 Monitor connector.
 Test failure recovery.
-🪣 Kafka → MinIO
+
+## 🪣 Kafka → MinIO
 
 Example pipeline:
 
@@ -612,7 +625,7 @@ This demonstrates a common Big Data architecture:
 
 Streaming Data → Object Storage → Analytics
 
-📊 Prometheus
+## 📊 Prometheus
 
 Prometheus provides metrics collection and time-series storage.
 
@@ -650,7 +663,7 @@ scrape_configs:
           - kafka01:9100
           - kafka02:9100
           - kafka03:9100
-📈 Grafana
+## 📈 Grafana
 
 Grafana visualizes platform metrics.
 
@@ -674,7 +687,8 @@ Big Data Platform
 ├── PostgreSQL
 ├── Redis
 └── Services
-🚨 Alertmanager
+
+## 🚨 Alertmanager
 
 Alertmanager processes Prometheus alerts.
 
@@ -699,7 +713,8 @@ Consumer lag
 MinIO node failure
 PostgreSQL unavailable
 Redis unavailable
-📁 SFTP + MinIO
+
+##  📁 SFTP + MinIO
 
 Secure external file transfer:
 
@@ -723,7 +738,8 @@ Batch ingestion
 Secure file transfer
 Legacy integration
 External data providers
-🔄 End-to-End Data Pipeline
+
+## 🔄 End-to-End Data Pipeline
 
 The complete platform demonstrates:
 
@@ -769,7 +785,8 @@ Alertmanager
      │
      ▼
 Notifications
-📂 Repository Structure
+
+## 📂 Repository Structure
 big-data-platform/
 │
 ├── README.md
@@ -871,7 +888,8 @@ big-data-platform/
     ├── health-check.sh
     ├── backup.sh
     └── cleanup.sh
-💻 Prerequisites
+
+## 💻 Prerequisites
 
 Before starting, prepare:
 
@@ -885,7 +903,7 @@ Sufficient CPU/RAM/storage
 Firewall configuration
 Local Workstation
 
-Recommended:
+## Recommended:
 
 git
 ssh
@@ -900,7 +918,8 @@ git --version
 ssh -V
 ansible --version
 python3 --version
-🚀 Quick Start
+
+## 🚀 Quick Start
 1. Clone Repository
 git clone https://github.com/<YOUR-USERNAME>/big-data-platform.git
 cd big-data-platform
@@ -909,10 +928,10 @@ python3 -m venv .venv
 
 Activate:
 
-source .venv/bin/activate
+`source .venv/bin/activate
 3. Install Dependencies
 pip install --upgrade pip
-pip install ansible
+pip install ansible`
 
 Verify:
 
@@ -961,7 +980,8 @@ ansible-playbook \
 ansible-playbook \
   -i inventories/production/hosts.ini \
   playbooks/site.yml
-🧪 Hands-on Labs
+
+## 🧪 Hands-on Labs
 
 The repository is organized around practical laboratories.
 
@@ -1118,7 +1138,8 @@ Prometheus
 Grafana
    +
 Alertmanager
-💥 Failure Recovery Labs
+
+## 💥 Failure Recovery Labs
 
 A major objective is to understand how distributed systems behave when things fail.
 
@@ -1162,7 +1183,8 @@ Alert Rule
 Alertmanager
       ↓
 Notification
-📊 Monitoring Strategy
+
+## 📊 Monitoring Strategy
 
 Every major platform service should expose or provide metrics.
 
@@ -1219,7 +1241,8 @@ PostgreSQL roles
 Least privilege
 Service accounts
 Secrets management
-📈 Benefits
+
+## 📈 Benefits
 
 This platform provides:
 
@@ -1267,7 +1290,8 @@ SRE
 Distributed Systems
 Security
 Monitoring
-🎓 Learning Outcomes
+
+## 🎓 Learning Outcomes
 
 After completing this repository, you should be able to:
 
@@ -1300,16 +1324,17 @@ Build Grafana dashboards.
 Configure Alertmanager.
 Troubleshoot distributed systems.
 Build an end-to-end Big Data Platform.
-🗺️ Roadmap
-Phase 1 — Infrastructure
 
-Contabo infrastructure
+## 🗺️ Roadmap
+[ ] Phase 1 — Infrastructure
 
-Linux configuration
+[ ] Contabo infrastructure
 
-Networking
+[ ] Linux configuration
 
-SSH
+[ ] Networking
+
+[ ] SSH
 
 Firewall
 
@@ -1331,7 +1356,7 @@ Templates
 
 Full automation
 
-Phase 3 — Security
+## Phase 3 — Security
 
 FreeIPA
 
@@ -1345,7 +1370,7 @@ CA
 
 TLS
 
-Phase 4 — Storage
+## Phase 4 — Storage
 
 MinIO
 
@@ -1373,7 +1398,7 @@ Backup
 
 Restore
 
-Phase 6 — Streaming
+## Phase 6 — Streaming
 
 ZooKeeper
 
@@ -1393,7 +1418,7 @@ Consumer groups
 
 Failure recovery
 
-Phase 7 — Data Integration
+## Phase 7 — Data Integration
 
 Schema Registry
 
@@ -1405,7 +1430,7 @@ PostgreSQL → Kafka
 
 Kafka → MinIO
 
-Phase 8 — Caching
+## Phase 8 — Caching
 
 Redis
 
@@ -1415,7 +1440,7 @@ Pub/Sub
 
 Persistence
 
-Phase 9 — Observability
+## Phase 9 — Observability
 
 Prometheus
 
@@ -1429,7 +1454,7 @@ Alertmanager
 
 Notifications
 
-Phase 10 — Final Platform
+## Phase 10 — Final Platform
 
 End-to-end deployment
 
@@ -1445,7 +1470,7 @@ Documentation
 
 Production-readiness review
 
-👨‍💻 Target Audience
+## 👨‍💻 Target Audience
 
 This repository is designed for:
 
@@ -1461,7 +1486,8 @@ Database Administrators
 Security Engineers
 BI Engineers
 Big Data learners
-📜 Technology Background
+
+## 📜 Technology Background
 
 Each technology chapter documents:
 
@@ -1481,7 +1507,8 @@ How is it tested?
 How does it fail?
 How is it recovered?
 How is it automated with Ansible?
-🧠 Learning Methodology
+
+## 🧠 Learning Methodology
 
 Every component follows:
 
@@ -1509,7 +1536,7 @@ This makes the repository more than an installation guide.
 
 It is a Big Data Platform Engineering Laboratory.
 
-🎯 Final Mission
+## 🎯 Final Mission
 Build it. Automate it. Secure it. Monitor it. Break it. Recover it.
 
 The final goal is to create a complete, automated, secure, observable, highly available Big Data Platform running on Contabo and managed through Infrastructure as Code.
