@@ -893,38 +893,38 @@ big-data-platform/
 
 Before starting, prepare:
 
-Infrastructure
-Contabo VPS instances
-Linux operating system
-Static IP addresses
-Hostnames
-SSH access
-Sufficient CPU/RAM/storage
-Firewall configuration
-Local Workstation
+- Infrastructure
+- Contabo VPS instances
+- Linux operating system
+- Static IP addresses
+- Hostnames
+- SSH access
+- Sufficient CPU/RAM/storage
+- Firewall configuration
+- Local Workstation
 
 ## Recommended:
 
-git
+`git
 ssh
 ansible
 python3
 curl
-jq
+jq`
 
 Verify:
 
-git --version
+`git --version
 ssh -V
 ansible --version
-python3 --version
+python3 --version`
 
 ## 🚀 Quick Start
 1. Clone Repository
-git clone https://github.com/<YOUR-USERNAME>/big-data-platform.git
-cd big-data-platform
+`git clone https://github.com/<YOUR-USERNAME>/big-data-platform.git
+cd big-data-platform`
 2. Create Python Environment
-python3 -m venv .venv
+`python3 -m venv .venv`
 
 Activate:
 
@@ -935,13 +935,15 @@ pip install ansible`
 
 Verify:
 
-ansible --version
-4. Configure Inventory
-cd ansible
+`ansible --version`
+
+**4. Configure Inventory**
+
+`cd ansible`
 
 Edit:
 
-nano inventories/production/hosts.ini
+`nano inventories/production/hosts.ini`
 
 Example:
 
@@ -966,26 +968,29 @@ redis01
 prometheus01
 grafana01
 alertmanager01
-5. Test Connectivity
-ansible all -i inventories/production/hosts.ini -m ping
+
+**5. Test Connectivity**
+`ansible all -i inventories/production/hosts.ini -m ping`
 
 Expected:
 
-SUCCESS
-6. Run Preflight
-ansible-playbook \
+**SUCCESS**
+
+**6. Run Preflight**
+`ansible-playbook \
   -i inventories/production/hosts.ini \
-  playbooks/00-preflight.yml
-7. Deploy Core Platform
-ansible-playbook \
+  playbooks/00-preflight.yml`
+
+**7. Deploy Core**
+`ansible-playbook \
   -i inventories/production/hosts.ini \
-  playbooks/site.yml
+  playbooks/site.yml`
 
 ## 🧪 Hands-on Labs
 
 The repository is organized around practical laboratories.
 
-Lab 01 — Infrastructure
+**Lab 01 — Infrastructure**
 
 Learn:
 
@@ -996,7 +1001,8 @@ SSH
 Firewall
 /etc/hosts
 Network connectivity
-Lab 02 — Ansible
+
+**Lab 02 — Ansible**
 
 Learn:
 
@@ -1008,7 +1014,8 @@ Templates
 Handlers
 Idempotency
 Tags
-Lab 03 — FreeIPA
+
+**Lab 03 — FreeIPA**
 
 Learn:
 
@@ -1019,7 +1026,8 @@ DNS
 Kerberos
 Certificates
 TLS
-Lab 04 — MinIO
+
+**Lab 04 — MinIO**
 
 Learn:
 
@@ -1030,7 +1038,8 @@ Buckets
 IAM
 Multi-tenancy
 mc CLI
-Lab 05 — PostgreSQL
+
+**Lab 05 — PostgreSQL**
 
 Learn:
 
@@ -1062,7 +1071,8 @@ Consumer groups
 Offsets
 Replication
 Retention
-Lab 08 — Schema Registry
+
+**Lab 08 — Schema Registry**
 
 Learn:
 
@@ -1085,31 +1095,32 @@ Lab 10 — Redis
 
 Learn:
 
-Data structures
-Caching
-TTL
-Pub/Sub
-Persistence
-Lab 11 — Kafka Connect
+- Data structures
+- Caching
+- TTL
+- Pub/Sub
+- Persistence
+- Lab 11 — Kafka Connect
 
 Learn:
 
-Source connectors
-Sink connectors
-Distributed workers
-PostgreSQL → Kafka
-Kafka → MinIO
-Lab 12 — Monitoring
+- Source connectors
+- Sink connectors
+- Distributed workers
+- PostgreSQL → Kafka
+- Kafka → MinIO
+- Lab 12 — Monitoring
 
 Learn:
 
-Prometheus
-Exporters
-Targets
-PromQL
-Grafana
-Alertmanager
-Lab 13 — End-to-End Platform
+- Prometheus
+- Exporters
+- Targets
+- PromQL
+- Grafana
+- Alertmanager
+
+**Lab 13 — End-to-End Platform**
 
 Deploy:
 
@@ -1246,35 +1257,23 @@ Secrets management
 
 This platform provides:
 
-*1. Automation:* Infrastructure can be recreated consistently through Ansible.
+**1. Automation:** Infrastructure can be recreated consistently through Ansible.
 
-*2. Scalability:* Kafka and MinIO can scale horizontally.
+**2. Scalability:** Kafka and MinIO can scale horizontally.
 
-*3.High Availability:* Distributed services reduce single points of failure.
+**3.High Availability:** Distributed services reduce single points of failure.
 
-Security
+**4.Security:** Centralized identity and TLS improve service security.
 
-Centralized identity and TLS improve service security.
+**5.Observability:** Prometheus and Grafana provide platform visibility.
 
-Observability
+**6. Data Integration:** Kafka Connect enables integration with databases and object storage.
 
-Prometheus and Grafana provide platform visibility.
+**7.Cost Efficiency:**  The platform is built primarily from open-source technologies.
 
-Data Integration
+**8.Reproducibility:** Infrastructure is represented as code.
 
-Kafka Connect enables integration with databases and object storage.
-
-Cost Efficiency
-
-The platform is built primarily from open-source technologies.
-
-Reproducibility
-
-Infrastructure is represented as code.
-
-Practical Skills
-
-The labs develop:
+**The labs develop:**
 
 - Linux administration
 - DevOps
@@ -1289,35 +1288,35 @@ The labs develop:
 
 After completing this repository, you should be able to:
 
-Design a Big Data Platform architecture.
-Provision infrastructure on Contabo.
-Automate servers using Ansible.
-Build reusable Ansible roles.
-Deploy FreeIPA.
-Configure TLS certificates.
-Deploy distributed MinIO.
-Configure S3 buckets and IAM.
-Use the mc CLI.
-Deploy PostgreSQL.
-Configure metadata databases.
-Build ZooKeeper clusters.
-Build multi-broker Kafka clusters.
-Manage Kafka topics.
-Manage partitions and replication.
-Manage consumer groups and offsets.
-Test Kafka producers and consumers.
-Perform failure recovery.
-Configure Schema Registry.
-Deploy Kafka UI.
-Deploy Redis.
-Configure Kafka Connect.
-Stream PostgreSQL data into Kafka.
-Stream Kafka data into MinIO.
-Deploy Prometheus.
-Build Grafana dashboards.
-Configure Alertmanager.
-Troubleshoot distributed systems.
-Build an end-to-end Big Data Platform.
+:ok_hand: Design a Big Data Platform architecture.
+:ok_hand: Provision infrastructure on Contabo.
+:ok_hand: Automate servers using Ansible.
+:ok_hand: Build reusable Ansible roles.
+:ok_hand: Deploy FreeIPA.
+:ok_hand: Configure TLS certificates.
+:ok_hand: Deploy distributed MinIO.
+:ok_hand: Configure S3 buckets and IAM.
+:ok_hand: Use the mc CLI.
+:ok_hand: Deploy PostgreSQL.
+:ok_hand: Configure metadata databases.
+:ok_hand: Build ZooKeeper clusters.
+:ok_hand: Build multi-broker Kafka clusters.
+:ok_hand: Manage Kafka topics.
+:ok_hand: Manage partitions and replication.
+:ok_hand: Manage consumer groups and offsets.
+:ok_hand: Test Kafka producers and consumers.
+:ok_hand: Perform failure recovery.
+:ok_hand: Configure Schema Registry.
+:ok_hand: Deploy Kafka UI.
+:ok_hand: Deploy Redis.
+:ok_hand: Configure Kafka Connect.
+:ok_hand: Stream PostgreSQL data into Kafka.
+:ok_hand: Stream Kafka data into MinIO.
+:ok_hand: Deploy Prometheus.
+:ok_hand: Build Grafana dashboards.
+:ok_hand: Configure Alertmanager.
+:ok_hand: Troubleshoot distributed systems.
+:ok_hand: Build an end-to-end Big Data Platform.
 
 ## 🗺️ Roadmap
 - [ ] Phase 1 — Infrastructure
@@ -1366,141 +1365,140 @@ Phase 2 — Automation
 
 ## Phase 4 — Storage
 
-MinIO
+- [ ] MinIO
 
-Distributed deployment
+- [ ] Distributed deployment
 
-Erasure coding
+- [ ] Erasure coding
 
-Buckets
+- [ ] Buckets
 
-IAM
+- [ ] IAM
 
-Multi-tenancy
+- [ ] Multi-tenancy
 
-S3 testing
+- [ ] S3 testing
 
-Benchmarking
+- [ ] Benchmarking
 
 Phase 5 — Database
 
-PostgreSQL
+- [ ] PostgreSQL
 
-Platform metadata
+- [ ] Platform metadata
 
-Backup
+- [ ] Backup
 
-Restore
+- [ ] Restore
 
 ## Phase 6 — Streaming
 
-ZooKeeper
+- [ ] ZooKeeper
 
-Kafka
+- [ ] Kafka
 
-Multi-broker cluster
+- [ ] Multi-broker cluster
 
-Topics
+- [ ] Topics
 
-Partitions
+- [ ] Partitions
 
-Replication
+- [ ] Replication
 
-Offsets
+- [ ] Offsets
 
-Consumer groups
+- [ ] Consumer groups
 
-Failure recovery
+- [ ] Failure recovery
 
 ## Phase 7 — Data Integration
 
-Schema Registry
+- [ ] Schema Registry
 
-Kafka UI
+- [ ] Kafka UI
 
-Kafka Connect
+- [ ] Kafka Connect
 
-PostgreSQL → Kafka
+- [ ] PostgreSQL → Kafka
 
-Kafka → MinIO
+- [ ] Kafka → MinIO
 
 ## Phase 8 — Caching
 
-Redis
+- [ ] Redis
 
-Caching patterns
+- [ ] Caching patterns
 
-Pub/Sub
+- [ ] Pub/Sub
 
-Persistence
+- [ ] Persistence
 
 ## Phase 9 — Observability
 
-Prometheus
+- [ ] Prometheus
 
-Exporters
+- [ ] Exporters
 
-Grafana
+- [ ] Grafana
 
-Dashboards
+- [ ] Dashboards
 
-Alertmanager
+- [ ] Alertmanager
 
-Notifications
+- [ ] Notifications
 
 ## Phase 10 — Final Platform
 
-End-to-end deployment
+- [ ] End-to-end deployment
 
-Security validation
+- [ ] Security validation
 
-Monitoring validation
+- [ ] Monitoring validation
 
-Failure testing
+- [ ] Failure testing
 
-Disaster recovery
+- [ ] Disaster recovery
 
-Documentation
+- [ ] Documentation
 
-Production-readiness review
-
+- [ ]  Production-readiness review
 ## 👨‍💻 Target Audience
 
 This repository is designed for:
 
-Data Engineers
-DevOps Engineers
-Platform Engineers
-Cloud Engineers
-System Administrators
-SRE Engineers
-Data Scientists
-ML Engineers
-Database Administrators
-Security Engineers
-BI Engineers
-Big Data learners
+- Data Engineers
+- DevOps Engineers
+- Platform Engineers
+- Cloud Engineers
+- System Administrators
+- SRE Engineers
+- Data Scientists
+- ML Engineers
+- Database Administrators
+- Security Engineers
+- BI Engineers
+- Big Data learners
 
 ## 📜 Technology Background
 
 Each technology chapter documents:
 
-What is it?
-Why was it developed?
-When was it developed?
-Who developed it?
-What problem does it solve?
-Who uses it?
-How does the architecture work?
-What are its components?
-How is it installed?
-How is it configured?
-How is it secured?
-How is it monitored?
-How is it tested?
-How does it fail?
-How is it recovered?
-How is it automated with Ansible?
+1. What is it?
+2. Why was it developed?
+3. When was it developed?
+4. Who developed it?
+5. What problem does it solve?
+6. Who uses it?
+7. How does the architecture work?
+8. What are its components?
+9. How is it installed?
+10. How is it configured?
+11. How is it secured?
+12. How is it monitored?
+13. How is it tested?
+14. How does it fail?
+15. How is it recovered?
+16. How is it automated with Ansible?
 
 ## 🧠 Learning Methodology
 
@@ -1531,7 +1529,7 @@ This makes the repository more than an installation guide.
 It is a Big Data Platform Engineering Laboratory.
 
 ## 🎯 Final Mission
-Build it. Automate it. Secure it. Monitor it. Break it. Recover it.
+```Build it. Automate it. Secure it. Monitor it. Break it. Recover it.```
 
 The final goal is to create a complete, automated, secure, observable, highly available Big Data Platform running on Contabo and managed through Infrastructure as Code.
 
