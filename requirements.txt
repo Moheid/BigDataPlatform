@@ -1,0 +1,5 @@
+ansible-core==2.16.6
+ansible==9.5.1
+jmespath==1.0.1
+netaddr==1.2.1
+passlib==1.7.4
